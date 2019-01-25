@@ -34,5 +34,4 @@ tmp
 .idea_modules
 bin
 scalastyle_config.xml
-*.sc
 
