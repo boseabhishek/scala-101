@@ -1,4 +1,0 @@
-[0m[[0m[0minfo[0m] [0m[0m[32mPartiallyAppliedFunctionsSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mPartially applied functions could be created[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- when a curried function is partially applied[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- when a normal method is partially applied[0m[0m

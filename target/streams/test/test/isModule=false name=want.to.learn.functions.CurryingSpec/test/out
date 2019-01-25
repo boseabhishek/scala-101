@@ -1,7 +1,0 @@
-[0m[[0m[0minfo[0m] [0m[0m[32mCurryingSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mcurried functions[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  can be created from a normal method in two steps[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - 1. transform it into a function and 2. invoke .curried on it[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  gives the same result as normal methods[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - when same params are passed[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- could be passed to another method which requires a curried function[0m[0m
