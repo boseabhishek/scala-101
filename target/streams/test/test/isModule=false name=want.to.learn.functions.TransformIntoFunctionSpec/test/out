@@ -1,0 +1,9 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTransformIntoFunctionSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mnormal methods[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  can be transformed into a function[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - when _ is applied to it[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  can be used as a function[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - when applied with params the same way as methods[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  of when transformed into a function of type A => A[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - can be composed[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - can be andThen[0m[0m
