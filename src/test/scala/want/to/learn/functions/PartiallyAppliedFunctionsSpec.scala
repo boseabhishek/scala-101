@@ -1,5 +1,6 @@
 package want.to.learn.functions
 
+import common.HavingNormalMethods
 import org.scalatest.{FreeSpec, MustMatchers}
 
 class PartiallyAppliedFunctionsSpec extends FreeSpec with MustMatchers with HavingNormalMethods {
