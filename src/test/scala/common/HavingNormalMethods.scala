@@ -1,4 +1,4 @@
-package want.to.learn.functions
+package common
 
 trait HavingNormalMethods {
 

@@ -1,5 +1,6 @@
 package want.to.learn.functions
 
+import common.HavingNormalMethods
 import org.scalatest.{FreeSpec, MustMatchers}
 
 class TransformIntoFunctionSpec extends FreeSpec with MustMatchers with HavingNormalMethods {
