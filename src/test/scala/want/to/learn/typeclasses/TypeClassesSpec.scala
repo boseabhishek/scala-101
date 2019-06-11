@@ -12,15 +12,19 @@ class TypeClassesSpec extends FreeSpec with MustMatchers {
   //I am Person. I will be one of A once I extend CanChat[A]
   final case class Person(firstName: String, lastName: String)
 
-  //I am Dog and ditto...
+  //I am Dog. I will be one of A once I extend CanChat[A]
   final case class Dog(name: String)
 
+  /*  N.B. using implicit is NOT something mandatory with type class,
+      it's just HELPS us using them and passing things implicitly
+      (see below)
+   */
 
   "Person and Dog are type of A (1) once they extend the type class CanChat[A]" - {
 
     "(2) then you can override the behaviour chat and NOT declare them as implicits" - {
 
-      object ChattyAddons {
+      object TypesHolderForCanChatTypeClass {
 
         object PersonCanChat extends CanChat[Person] {
           def chat(x: Person) = s"Hi, I'm ${x.firstName}"
@@ -34,16 +38,16 @@ class TypeClassesSpec extends FreeSpec with MustMatchers {
 
       "followed by (3) using them where needed BUT cannot use implicits as they are NOT" in {
 
-        import ChattyAddons._
+        import TypesHolderForCanChatTypeClass._
 
         //need to pass them explicitly everytime. Problem is solved by using Implicit.
-        object ChatUtil {
-          def chat[A](x: A, chattyThing: CanChat[A]) = {
+        object HelloUtil {
+          def hello[A](x: A, chattyThing: CanChat[A]): String = {
             chattyThing.chat(x)
           }
         }
 
-        ChatUtil.chat(Dog("Jack"), DogCanChat) mustBe "Woof, my name is Jack"
+        HelloUtil.hello(Dog("Jack"), DogCanChat) mustBe "Woof, my name is Jack"
 
       }
 
@@ -52,7 +56,7 @@ class TypeClassesSpec extends FreeSpec with MustMatchers {
 
     "(2) then you can override the behaviour chat and declare them as implicits so that they can be used implicitly" - {
 
-      object ChattyAddons {
+      object TypeClassInstancesHolderForCanChatTypeClass {
 
         implicit object PersonCanChat extends CanChat[Person] {
           def chat(x: Person) = s"Hi, I'm ${x.firstName}"
@@ -66,14 +70,15 @@ class TypeClassesSpec extends FreeSpec with MustMatchers {
 
       "followed by (3) using them where needed, by importing the implicits in scope" in {
 
-        import ChattyAddons._
-        object ChatUtil {
-          def chat[A](x: A)(implicit chattyThing: CanChat[A]) = {
+        import TypeClassInstancesHolderForCanChatTypeClass._
+
+        object HelloUtil {
+          def hello[A](x: A)(implicit chattyThing: CanChat[A]) = {
             chattyThing.chat(x)
           }
         }
 
-        ChatUtil.chat(Dog("Jack")) mustBe "Woof, my name is Jack"
+        HelloUtil.hello(Dog("Jack")) mustBe "Woof, my name is Jack"
 
       }
 

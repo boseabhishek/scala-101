@@ -8,6 +8,8 @@ trait CanChat[A] {
 }
 
 ```
+TypeClass - CanChat[A], Ordering[A]
+Type instances of A - String, Int, Person, Animal etc.
 
 This defines not just one type, but a set of types. Some particular types which are members of this set would be
 CanChat[String], CanChat[Int], CanChat[SomeUserDefinedType], in the same way that “this”, “that”, “the other”
