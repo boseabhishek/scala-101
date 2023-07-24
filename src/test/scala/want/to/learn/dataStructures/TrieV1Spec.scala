@@ -1,8 +1,9 @@
 package want.to.learn.dataStructures
 
-import org.scalatest.{FreeSpec, MustMatchers}
+import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.matchers.must.Matchers.convertToAnyMustWrapper
 
-class TrieV1Spec extends FreeSpec with MustMatchers {
+class TrieV1Spec extends AnyFreeSpec {
 
   ".insert" - {
     "must insert values in the Trie" in {

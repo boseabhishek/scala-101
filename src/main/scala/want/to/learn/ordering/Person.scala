@@ -1,6 +1,6 @@
 package want.to.learn.ordering
 
-import org.joda.time.{DateTime, LocalDate}
+import org.joda.time.LocalDate
 
 case class Person(name: String, dob: LocalDate)
 

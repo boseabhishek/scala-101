@@ -1,12 +1,12 @@
 package want.to.learn.futures
 
-import org.scalatest.{FreeSpec, MustMatchers}
+import org.scalatest.freespec.AnyFreeSpec
 import want.to.learn.futures.danielWestheide.WhatsInFuture
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-class FutureSpec extends FreeSpec with MustMatchers with WhatsInFuture{
+class FutureSpec extends AnyFreeSpec with WhatsInFuture{
 
   ".onSuccess" - {
 
@@ -17,7 +17,6 @@ class FutureSpec extends FreeSpec with MustMatchers with WhatsInFuture{
         val result: Unit = grind("arabica beans").onSuccess { case ground =>
           ground
         }
-
       }
 
     }
