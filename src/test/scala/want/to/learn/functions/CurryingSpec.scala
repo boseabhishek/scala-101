@@ -1,7 +1,8 @@
 package want.to.learn.functions
 
 import common.HavingNormalMethods
-import org.scalatest.{FreeSpec, MustMatchers}
+import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.matchers.must.Matchers.convertToAnyMustWrapper
 
 /*
 Currying is the technique of transforming a function with multiple arguments into a function with just one argument.
@@ -12,7 +13,7 @@ This chaining continues over the number of arguments of the original. The last i
 You can turn any function with multiple arguments into it’s curried equivalen
  */
 
-class CurryingSpec extends FreeSpec with MustMatchers with HavingNormalMethods {
+class CurryingSpec extends AnyFreeSpec with HavingNormalMethods {
 
   "curried functions" - {
 

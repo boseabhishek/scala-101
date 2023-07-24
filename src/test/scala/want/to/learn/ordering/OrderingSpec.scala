@@ -1,10 +1,10 @@
 package want.to.learn.ordering
 
 import org.joda.time.LocalDate
-import org.scalatest.{FreeSpec, MustMatchers}
-import want.to.learn.typeclasses.TypeClassesSpec
+import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.matchers.must.Matchers.convertToAnyMustWrapper
 
-class OrderingSpec extends FreeSpec with MustMatchers {
+class OrderingSpec extends AnyFreeSpec {
 
   ".sorted method on a list" - {
 

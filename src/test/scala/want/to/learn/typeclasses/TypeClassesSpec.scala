@@ -1,8 +1,9 @@
 package want.to.learn.typeclasses
 
-import org.scalatest.{FreeSpec, MustMatchers}
+import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.matchers.must.Matchers.convertToAnyMustWrapper
 
-class TypeClassesSpec extends FreeSpec with MustMatchers {
+class TypeClassesSpec extends AnyFreeSpec {
 
   //I am a type class for any type A as long as they extend me
   trait CanChat[A] {

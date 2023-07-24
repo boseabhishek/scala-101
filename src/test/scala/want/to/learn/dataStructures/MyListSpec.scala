@@ -1,10 +1,11 @@
 package want.to.learn.dataStructures
 
-import org.scalatest.{FreeSpec, MustMatchers}
+import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.matchers.must.Matchers.convertToAnyMustWrapper
 
-class MyListSpec extends FreeSpec with MustMatchers {
+class MyListSpec extends AnyFreeSpec {
 
-  val intList = Pair(1, Pair(2, Pair(3, End())))
+  val intList: Pair[Nothing] = Pair(1, Pair(2, Pair(3, End())))
 
   ".sum must" - {
     "return the sum of the elments in IntList" in {

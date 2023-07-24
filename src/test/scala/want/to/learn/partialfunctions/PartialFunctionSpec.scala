@@ -2,9 +2,10 @@ package want.to.learn.partialfunctions
 
 
 import org.joda.time.LocalDate
-import org.scalatest.{FreeSpec, MustMatchers}
+import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.matchers.must.Matchers.convertToAnyMustWrapper
 
-class PartialFunctionSpec extends FreeSpec with MustMatchers {
+class PartialFunctionSpec extends AnyFreeSpec {
 
   val evenNumber: PartialFunction[Int, Boolean] = {
     case x if x % 2 == 0 => true
