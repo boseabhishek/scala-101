@@ -1,6 +1,6 @@
 https://danielwestheide.com/blog/2013/01/09/the-neophytes-guide-to-scala-part-8-welcome-to-the-future.html
 
-```
+```scala
 /** Contains factory methods for creating execution contexts.
  */
 object ExecutionContext {
